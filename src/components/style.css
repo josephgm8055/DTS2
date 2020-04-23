@@ -1,0 +1,22 @@
+.menugroup{
+    margin:22px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.menugroup a{
+    margin:10px;
+}
+.menugroup .active{
+    padding:6px;
+    background-color:#4E4F61;
+    color:white;
+    border-radius: 5px;
+}
+.menuImage{
+    display:inline-block
+}
+@media only screen and (max-width: 645px) {
+    .menuImage {
+      display: none;
+    }
+  }
