@@ -24,6 +24,7 @@ const PieChart1 = () => {
                 ]}
                 animate={true}
                 label
+                
                 labelPosition={50}
                 labelStyle={{
                     fill: '#fff',

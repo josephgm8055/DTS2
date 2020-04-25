@@ -6,6 +6,9 @@ import PieChart from './piechart'
 import DashboardTable from './dashboardTable'
 import Card from './card'
 import CardBig from './cardBig'
+import StatusChart from './statusChart'
+import TeamChart from './teamChart'
+import WeeklyChart from './weeklyChart'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -16,25 +19,25 @@ class Dashboard extends Component {
             <div>
                 <NavBar />
                 <MenuBar selected="dash" />
-                <div style={{ backgroundColor: '#F5F5F8',display:'flex',justifyContent:'space-around' ,paddingTop:30, flexWrap:'wrap'}}>
+                <div style={{ backgroundColor: '#E7E7FF',display:'flex',justifyContent:'space-around' ,paddingTop:30, flexWrap:'wrap'}}>
 
                     <Card >
                         <PieChart/>
                     </Card>
                     <Card >
-                        <PieChart/>
+                        <StatusChart/>
                     </Card>
                     <Card >
-                        <PieChart/>
+                        <TeamChart/>
                     </Card>
                     <Card >
-                        <PieChart/>
+                        
                     </Card>
                     <CardBig>
                         <LineChart/>
                     </CardBig>
                     <CardBig>
-                        <LineChart/>
+                        <WeeklyChart/>
                     </CardBig>
                 </div>
 
