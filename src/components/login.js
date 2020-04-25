@@ -6,7 +6,42 @@ import { Link } from 'react-router-dom'
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            uname: '',
+            pword: ''
+        };
+    }
+    updateUsername = (e) => {
+        this.setState({
+            uname: e.target.value
+        })
+    }
+    updatePassord = (e) => {
+        this.setState({
+            pword: e.target.value
+        })
+    }
+    checkLogin = (e) => {
+        e.preventDefault()
+        var data = {
+            uname: this.state.uname,
+            pword: this.state.pword
+        }
+        fetch(`http://localhost:2020/login`, {
+            method: "POST",
+            mode: "cors",
+            body: JSON.stringify(data)
+        }).then((resp) => resp.text())
+            .then((res) => {
+                if (res == 'success') this.props.history.push(`/dashboard`);
+                console.log(res)
+                console.log(this.props)
+
+
+            }).catch((error) => {
+                console.log(error)
+            });;
+
     }
     render() {
         return (
@@ -20,25 +55,26 @@ class Login extends Component {
 
                         </div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form onSubmit={(e) => this.checkLogin(e)}>
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-user"></
+                                        i></span>
                                     </div>
-                                    <input type="text" name="email" class="form-control" placeholder="Username" />
+                                    <input onChange={(e) => this.updateUsername(e)} type="text" name="username" class="form-control" placeholder="Username" value={this.state.uname} />
                                 </div>
 
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-key"></i></span>
                                     </div>
-                                    <input type="password" name="password" class="form-control" placeholder="Password" />
+                                    <input type="password" name="password" class="form-control" placeholder="Password" value={this.state.pword} onChange={(e) => this.updatePassord(e)} />
                                 </div>
 
                                 <div class="form-group">
-                                <Link to='/dashboard'>
+
                                     <input type="submit" name="btn" value="Login" class="btn btn-outline-danger float-right login_btn" />
-                                </Link>
+
                                 </div>
 
                             </form>
