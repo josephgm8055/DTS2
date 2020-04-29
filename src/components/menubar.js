@@ -61,7 +61,7 @@ class MenuBar extends Component {
         return (
             <div>
                 <div style={{ disply: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '11vh', backgroundColor: '#DBDBE1', alignItems: 'center' }}>
-                    <img className="menuImage" src={logo} style={{ maxHeight: '100%', width: 280 }}></img>
+                    <img className="menuImage" src={logo} style={{ maxHeight: '100%', width: 100}}></img>
                     {this.selectedMenu()}
 
                 </div>

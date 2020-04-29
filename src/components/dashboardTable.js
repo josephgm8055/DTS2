@@ -8,7 +8,7 @@ class DashboardTable extends Component {
     render() { 
         return (
             <div style={{width:'80%',marginLeft:'10%',paddingBottom:30,paddingTop:30}}>
-                <table className='table table-bordered table-hover text-center'>
+                <table className='table table-bordered table-hover text-center' style={{borderRadius:30}}>
                     <thead class="thead-dark">
                         <tr>
                             <th>Statuses</th>

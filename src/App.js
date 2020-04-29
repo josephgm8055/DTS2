@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard'
 import Login from './components/login'
 import Release from './components/release'
 import Defects from './components/defects'
+import DefectView from './components/defectView'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path='/dashboard' exact component={Dashboard}/>
       <Route path='/release' exact component={Release}/>
       <Route path='/defects' exact component={Defects}/>
+      <Route path='/view' component={DefectView}/>
       </Switch>
     </Router>
     

@@ -9,6 +9,7 @@ import CardBig from './cardBig'
 import StatusChart from './statusChart'
 import TeamChart from './teamChart'
 import WeeklyChart from './weeklyChart'
+import TopBugFixers from './topBugFixers'
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +32,7 @@ class Dashboard extends Component {
                         <TeamChart/>
                     </Card>
                     <Card >
-                        
+                        <TopBugFixers/>
                     </Card>
                     <CardBig>
                         <LineChart/>
@@ -39,9 +40,13 @@ class Dashboard extends Component {
                     <CardBig>
                         <WeeklyChart/>
                     </CardBig>
+                    <div style={{backgroundColor:'white',borderRadius:15,width:'80%',height:'40vh',marginBottom:30,boxShadow:'3px 3px 8px gray'}}>
+                    <DashboardTable />
+                    </div>
+                    
                 </div>
 
-
+                
             </div>
         );
     }
