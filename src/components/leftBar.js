@@ -20,7 +20,7 @@ class LeftBar extends Component {
     }
     render() {
         return (
-            <div className="leftDiv" style={{ width: '65%', height: '71vh', backgroundColor: 'rgb(231, 231, 255)', overflow: 'scroll' }}>
+            <div className="leftDiv" style={{ width: '65%', height: '67vh', backgroundColor: 'rgb(231, 231, 255)', overflow: 'scroll' }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{marginLeft:'1%' ,fontSize:20,fontWeight:600}}>Status</span>
                     <div style={{ display: 'flex', flexDirection: 'row',alignItems:'center',margin:'0px 10px' }}>

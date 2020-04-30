@@ -7,7 +7,7 @@ class RightBar extends Component {
     }
     render() {
         return (
-            <div style={{ width: '35%', height: '71vh', overflow: 'scroll',backgroundColor:'rgb(231, 231, 255)'}}>
+            <div style={{ width: '35%', height: '67vh', overflow: 'scroll',backgroundColor:'rgb(231, 231, 255)'}}>
                 <div className="items" style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{marginLeft:'1%',fontSize:16,fontWeight:600}}>OWNER</span>
                     <div>

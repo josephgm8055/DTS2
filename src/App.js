@@ -6,7 +6,7 @@ import Login from './components/login'
 import Release from './components/release'
 import Defects from './components/defects'
 import DefectView from './components/defectView'
-
+import Discussion from './components/discussion'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
   return (
